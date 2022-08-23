@@ -7,5 +7,21 @@ namespace first_Webapi.Controllers
     [ApiController]
     public class firstWebController : ControllerBase
     {
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            var newPersonList = new List<firstWeb>
+            {
+                new firstWeb
+                {
+                    id = 1,
+                    name = "Janindu",
+                    age = 18,
+                    schoolName = "Rahula"
+                }
+            };
+
+            return Ok(newPersonList);
+        }
     }
 }
