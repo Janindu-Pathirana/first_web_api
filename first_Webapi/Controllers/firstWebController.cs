@@ -63,5 +63,17 @@ namespace Person_webapi.Controllers
             personList.Add(person);
             return Ok(personList);
         }
+
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult<List<Person>>> Delete(int id)
+        {
+            var person = personList.Find(p =>p.id == id);
+
+            if (person == null) return NotFound("cant find the person"); 
+
+            personList.Remove(person);
+
+            return Ok(personList);
+        }
     }
 }
