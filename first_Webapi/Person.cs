@@ -1,6 +1,6 @@
-﻿namespace first_Webapi
+﻿namespace Person_webapi
 {
-    public class firstWeb
+    public class Person
     {
         public int id { get; set; }
         public string name { get; set; } = string.Empty;

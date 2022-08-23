@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace first_Webapi.Controllers
+namespace Person_webapi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
